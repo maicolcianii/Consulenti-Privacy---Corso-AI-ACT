@@ -117,19 +117,19 @@ export default function App() {
 
               <p className="mt-6 text-[17px] text-white/88 leading-relaxed max-w-xl">
                 <span className="inline sm:hidden">
-                  Un corso online di 90 minuti sull’uso corretto dell’IA, come richiesto dall’art. 4 dell’AI Act, con attestato nominativo per ogni partecipante.
+                  Un corso online on demand sull’uso corretto dell’IA, come richiesto dall’art. 4 dell’AI Act: ognuno lo segue quando vuole, con attestato nominativo.
                 </span>
                 <span className="hidden sm:inline">
-                  Un corso online di 90 minuti che forma i dipendenti sull’uso corretto dell’IA, come richiesto dall’art. 4 del Regolamento europeo. Al termine, ogni partecipante riceve un attestato nominativo che documenta la formazione svolta.
+                  Un corso online on demand che forma i dipendenti sull’uso corretto dell’IA, come richiesto dall’art. 4 del Regolamento europeo. Nessuna diretta e nessuna data da fissare: ognuno lo segue quando vuole, in circa 90 minuti complessivi, e al termine riceve un attestato nominativo.
                 </span>
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
                 <span className="inline-flex items-center bg-[#302687]/60 border border-white/20 text-white text-[14px] font-medium px-4 py-2 rounded-lg backdrop-blur-sm">
-                  90 minuti online
+                  On demand, quando vuoi
                 </span>
                 <span className="inline-flex items-center bg-[#302687]/60 border border-white/20 text-white text-[14px] font-medium px-4 py-2 rounded-lg backdrop-blur-sm">
-                  Test finale
+                  Senza fermare il lavoro
                 </span>
                 <span className="inline-flex items-center bg-[#302687]/60 border border-white/20 text-white text-[14px] font-medium px-4 py-2 rounded-lg backdrop-blur-sm">
                   Attestato nominativo
@@ -651,20 +651,20 @@ export default function App() {
               {/* Box con la sfumatura del brand */}
               <div className="bg-brand-gradient text-white rounded-[14px] p-6 sm:p-8 mt-8 shadow-lg">
                 <h3 className="text-[18px] font-bold text-white mb-4">
-                  Il formato
+                  Un corso on demand
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Formazione a distanza, circa 90 minuti</span>
+                    <span>Nessuna diretta e nessuna data da concordare</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Fruibile in autonomia, senza fermare l’operatività</span>
+                    <span>Ognuno lo segue quando vuole, senza fermare l’operatività</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Piattaforma e-learning consolidata</span>
+                    <span>Circa 90 minuti in tutto, su piattaforma e-learning consolidata</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
@@ -863,7 +863,7 @@ export default function App() {
           <div className="bg-brand-gradient rounded-[18px] p-8 sm:p-12 text-white shadow-xl flex flex-col min-[960px]:flex-row min-[960px]:items-center justify-between gap-8">
             <div>
               <h3 className="text-[24px] sm:text-[30px] min-[960px]:text-[32px] font-bold text-white leading-tight">
-                90 minuti per formare il personale, un attestato per documentarlo.
+                Ognuno si forma quando vuole, l’azienda documenta tutto.
               </h3>
               <p className="mt-2 text-[16px] text-white/88">
                 Riserva l’accesso prioritario per la tua azienda.
@@ -934,9 +934,19 @@ export default function App() {
                   }}
                   className="w-full min-[560px]:w-[200px] aspect-[3/2] object-cover rounded-[10px] shrink-0 shadow-sm"
                 />
-                <p className="text-[14.5px] text-[#5E5B78] leading-relaxed">
-                  Un team di consulenti specializzati in GDPR, NIS2 e AI Act, con sedi a Rimini, Bologna, Milano e Roma, al fianco di aziende, enti pubblici e privati.
-                </p>
+                <div>
+                  <p className="text-[14.5px] text-[#5E5B78] leading-relaxed">
+                    Un team di consulenti specializzati in GDPR, NIS2 e AI Act, con sedi a Rimini, Bologna, Milano e Roma, al fianco di aziende, enti pubblici e privati.
+                  </p>
+                  <a
+                    href="https://www.iconsulentiprivacy.it/ai-legal-compliance-check/"
+                    target="_blank"
+                    rel="noopener"
+                    className="inline-block mt-[10px] text-[14.5px] text-[#302687] font-semibold underline hover:opacity-85 transition-opacity"
+                  >
+                    Approfondisci la nostra consulenza AI Act sul sito →
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -992,8 +1002,8 @@ export default function App() {
                 a: "L’AI Act non prevede una certificazione ufficiale per l’alfabetizzazione in materia di IA. L’attestato nominativo, con data ed esito del test, insieme al programma del corso e al registro della formazione, costituisce la documentazione da esibire in caso di verifica.",
               },
               {
-                q: "Il corso interrompe l’attività lavorativa?",
-                a: "No. Il corso è online e fruibile in autonomia: ogni dipendente lo segue nel momento più adatto, in circa 90 minuti complessivi.",
+                q: "Serve fissare una data o fermare il lavoro?",
+                a: "No. Il corso è on demand: non ci sono dirette né date da concordare. Ogni dipendente lo segue nel momento più adatto, per circa 90 minuti complessivi.",
               },
               {
                 q: "L’iscrizione alla lista d’attesa è vincolante?",
