@@ -1,0 +1,6 @@
+{
+  "name": "Consulenti Privacy - Corso AI Literacy",
+  "description": "Lista d'attesa per il corso online di 90 minuti sull'AI Literacy ai sensi dell'art. 4 dell'AI Act. Con modello Excel per la mappatura degli strumenti di IA in azienda.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

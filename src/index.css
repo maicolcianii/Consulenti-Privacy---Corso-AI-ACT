@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-brand-purple: #302687;
+  --color-brand-light: #8C82DE;
+  --color-brand-accent: #5A4FC0;
+  --color-brand-text: #1E1B3A;
+  --color-brand-subtext: #5E5B78;
+  --color-brand-border: #E6E4F5;
+  --color-brand-alt: #F5F4FC;
+  --color-brand-footer: #111214;
+  --color-brand-legal: #1B1C20;
+}
+
+:root {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1E1B3A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-brand-gradient {
+  background: linear-gradient(120deg, #8C82DE 0%, #5A4FC0 45%, #302687 100%);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #302687;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 14px 26px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #3e32a6;
+}
+
+.btn-primary-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #302687;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 6px;
+  padding: 14px 26px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.btn-primary-outline:hover {
+  background-color: #3e32a6;
+  border-color: rgba(255, 255, 255, 0.6);
+}
+
+.card-base {
+  background-color: #FFFFFF;
+  border: 1px solid #E6E4F5;
+  border-radius: 12px;
+  padding: 28px;
+}
