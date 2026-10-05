@@ -8,6 +8,7 @@ export default function App() {
     azienda: '',
     email: '',
     ruolo: '',
+    ruoloAltro: '',
     dipendenti: '',
     consenso: false,
   });
@@ -38,11 +39,20 @@ export default function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (formData.ruolo === 'Altro' && !formData.ruoloAltro.trim()) {
+      return;
+    }
+
+    const finalRuolo =
+      formData.ruolo === 'Altro'
+        ? `Altro: ${formData.ruoloAltro.trim()}`
+        : formData.ruolo;
+
     const webhookPayload = {
       nome: formData.nome,
       azienda: formData.azienda,
       email: formData.email,
-      ruolo: formData.ruolo,
+      ruolo: finalRuolo,
       dipendenti: formData.dipendenti,
       consenso: formData.consenso,
       dataIscrizione: new Date().toISOString(),
@@ -212,9 +222,14 @@ export default function App() {
                         <select
                           required
                           value={formData.ruolo}
-                          onChange={(e) =>
-                            setFormData({ ...formData, ruolo: e.target.value })
-                          }
+                          onChange={(e) => {
+                            const val = e.target.value;
+                            setFormData((prev) => ({
+                              ...prev,
+                              ruolo: val,
+                              ruoloAltro: val === 'Altro' ? prev.ruoloAltro : '',
+                            }));
+                          }}
                           className="w-full h-11 px-3 text-sm bg-white border border-[#E6E4F5] rounded-md text-[#1E1B3A] focus:outline-none focus:border-[#302687] focus:ring-1 focus:ring-[#302687]"
                         >
                           <option value="">Seleziona</option>
@@ -251,6 +266,25 @@ export default function App() {
                         </select>
                       </div>
                     </div>
+
+                    {/* Campo specifica ruolo se "Altro" */}
+                    {formData.ruolo === 'Altro' && (
+                      <div className="animate-fade-slide">
+                        <label className="block text-xs font-semibold text-[#1E1B3A] mb-1.5">
+                          Specifica il tuo ruolo *
+                        </label>
+                        <input
+                          type="text"
+                          required
+                          value={formData.ruoloAltro}
+                          onChange={(e) =>
+                            setFormData({ ...formData, ruoloAltro: e.target.value })
+                          }
+                          placeholder="Es. Responsabile qualità"
+                          className="w-full h-11 px-3.5 text-sm bg-white border border-[#E6E4F5] rounded-md text-[#1E1B3A] placeholder-[#5E5B78]/60 focus:outline-none focus:border-[#302687] focus:ring-1 focus:ring-[#302687]"
+                        />
+                      </div>
+                    )}
 
                     {/* Checkbox informativa privacy */}
                     <div className="pt-1">
@@ -891,7 +925,7 @@ export default function App() {
               <div className="relative w-full aspect-[4/5] rounded-[14px] overflow-hidden shadow-lg border border-[#E6E4F5]">
                 <img
                   src="/ceo.webp"
-                  alt="CEO e DPO di Consulenti Privacy"
+                  alt="Paolo Rosetti, CEO e Data Protection Officer di Consulenti Privacy"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.style.visibility = 'hidden';
@@ -901,7 +935,7 @@ export default function App() {
                 {/* Targhetta bianca al 95% in basso sopra la foto */}
                 <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 sm:p-4 shadow-md border border-[#E6E4F5]">
                   <p className="font-bold text-[#302687] text-[15px]">
-                    Nome Cognome
+                    Paolo Rosetti
                   </p>
                   <p className="text-[12.5px] text-[#5E5B78] mt-0.5">
                     CEO e Data Protection Officer, Consulenti Privacy
