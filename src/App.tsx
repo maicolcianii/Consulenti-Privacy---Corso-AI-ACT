@@ -679,7 +679,7 @@ export default function App() {
                 Cosa imparano i dipendenti
               </h2>
               <p className="mt-4 text-[16px] text-[#5E5B78] leading-relaxed">
-                Un percorso essenziale, pensato per chi utilizza l’IA nel lavoro di tutti i giorni e non per specialisti. Ogni modulo si traduce in competenze da applicare subito.
+                Un percorso pensato per coniugare adempimento normativo, praticità organizzativa e qualità dei contenuti, per chi utilizza l’IA nel lavoro di tutti i giorni.
               </p>
 
               {/* Box con la sfumatura del brand */}
@@ -694,11 +694,15 @@ export default function App() {
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Ognuno lo segue quando vuole, senza fermare l’operatività</span>
+                    <span>Fruizione flessibile, nei tempi compatibili con il lavoro</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Circa 90 minuti in tutto, su piattaforma e-learning consolidata</span>
+                    <span>Accesso individuale e riservato</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-[14.5px]">
+                    <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
+                    <span>Contenuti uniformi per tutto il personale</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
@@ -801,7 +805,7 @@ export default function App() {
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <p className="text-[15px] text-[#1E1B3A]">
-                    <strong>Attestato nominativo</strong> per ogni partecipante, con data di completamento ed esito del test
+                    <strong>Attestato nominativo</strong> di partecipazione e superamento del corso, rilasciato dopo il test finale
                   </p>
                 </div>
 
@@ -810,7 +814,7 @@ export default function App() {
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <p className="text-[15px] text-[#1E1B3A]">
-                    <strong>Programma del corso</strong> con riferimento esplicito all’art. 4 dell’AI Act
+                    <strong>Tracciabilità</strong> delle attività e monitoraggio di ogni partecipante, grazie al formato SCORM
                   </p>
                 </div>
 
@@ -819,7 +823,7 @@ export default function App() {
                     <Check className="w-3.5 h-3.5 stroke-[3]" />
                   </div>
                   <p className="text-[15px] text-[#1E1B3A]">
-                    <strong>Registro della formazione</strong> di tutto il personale, esportabile
+                    <strong>Reportistica</strong> della piattaforma e-learning, utile ai fini documentali in caso di verifiche ispettive
                   </p>
                 </div>
               </div>
@@ -827,61 +831,127 @@ export default function App() {
 
             {/* Destra: Anteprima attestato */}
             <div className="relative">
-              <div className="bg-white rounded-[14px] shadow-[0_20px_40px_rgba(48,38,135,0.14)] border border-[#E6E4F5] overflow-hidden">
-                {/* Barra superiore di 8px con la sfumatura del brand */}
-                <div className="h-2 w-full bg-brand-gradient" />
+              <div className="relative w-full bg-white rounded-[14px] shadow-[0_20px_50px_rgba(48,38,135,0.18)] border border-[#E6E4F5] overflow-hidden flex flex-col justify-between aspect-[16/10] min-h-[310px] sm:min-h-[380px]">
+                {/* Barra superiore di 6px con la sfumatura del brand */}
+                <div className="h-[6px] w-full bg-brand-gradient shrink-0" />
 
-                <div className="p-8 sm:p-10">
-                  <div className="flex items-center justify-between border-b border-[#E6E4F5] pb-5">
-                    <img
-                      src="/logo-consulenti-privacy.webp"
-                      alt="Consulenti Privacy"
-                      height={40}
-                      loading="lazy"
-                      onError={(e) => {
-                        e.currentTarget.style.visibility = 'hidden';
-                      }}
-                      className="h-[40px] w-auto object-contain"
-                    />
-                    <span className="text-[12px] font-mono text-[#5E5B78] uppercase">
-                      Attestato n. 000123
-                    </span>
-                  </div>
+                {/* Cornice interna sottile (1px #E6E4F5) a 14px dai bordi */}
+                <div className="pointer-events-none absolute inset-[14px] border border-[#E6E4F5] rounded-[8px]" />
 
-                  <div className="py-6 text-center">
-                    <p className="text-[14px] text-[#5E5B78] uppercase tracking-wider font-medium">
-                      Si attesta che
-                    </p>
-                    <h3 className="text-[28px] font-bold text-[#302687] my-2">
-                      Mario Rossi
+                {/* Elementi decorativi geometrici negli angoli (fasce diagonali) */}
+                <div className="pointer-events-none absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 overflow-hidden z-10">
+                  <div className="absolute top-0 right-0 w-32 h-7 sm:w-36 sm:h-8 bg-brand-gradient opacity-90 origin-top-right transform -rotate-45 translate-x-4 translate-y-4 shadow-sm" />
+                  <div className="absolute top-0 right-0 w-28 h-2 bg-white/30 origin-top-right transform -rotate-45 translate-x-5 translate-y-8" />
+                </div>
+                <div className="pointer-events-none absolute bottom-0 left-0 w-20 h-20 sm:w-24 sm:h-24 overflow-hidden z-10">
+                  <div className="absolute bottom-0 left-0 w-32 h-7 sm:w-36 sm:h-8 bg-brand-gradient opacity-90 origin-bottom-left transform -rotate-45 -translate-x-4 -translate-y-4 shadow-sm" />
+                  <div className="absolute bottom-0 left-0 w-28 h-2 bg-white/30 origin-bottom-left transform -rotate-45 -translate-x-5 -translate-y-8" />
+                </div>
+
+                {/* Contenuto centrato */}
+                <div className="relative px-5 py-5 sm:px-8 sm:py-7 min-[960px]:px-9 min-[960px]:py-8 text-center flex-1 flex flex-col justify-between">
+                  {/* Testata dell'attestato */}
+                  <div>
+                    {/* 1. Titolo su due righe */}
+                    <h3 className="font-bold uppercase text-[#302687] text-[15px] min-[400px]:text-[16px] sm:text-[19px] min-[960px]:text-[21px] tracking-[0.02em] leading-[1.2] max-w-[92%] mx-auto font-sans">
+                      ATTESTATO DI PARTECIPAZIONE<br />E SUPERAMENTO DEL CORSO
                     </h3>
-                    <p className="text-[14.5px] text-[#5E5B78] leading-relaxed max-w-md mx-auto">
-                      ha completato con esito positivo il corso{' '}
-                      <strong className="text-[#1E1B3A]">
-                        AI Literacy: alfabetizzazione in materia di Intelligenza Artificiale
-                      </strong>{' '}
-                      ai sensi dell’art. 4 del Regolamento (UE) 2024/1689.
-                    </p>
+
+                    {/* 2. Tre righe in maiuscolo */}
+                    <div className="mt-2 sm:mt-3 space-y-0.5 sm:space-y-1 font-medium uppercase text-[#5E5B78] text-[8.5px] min-[400px]:text-[9px] sm:text-[10px] min-[960px]:text-[11px] tracking-[0.18em] leading-tight">
+                      <div>AI LITERACY - AI ACT</div>
+                      <div>REGOLAMENTO (UE) 2024/1689 E D.LGS. 9 SETTEMBRE 2026, N. 160</div>
+                      <div>(IN MODALITÀ E-LEARNING)</div>
+                    </div>
+
+                    {/* 3. PER “*************” */}
+                    <div className="mt-2.5 sm:mt-[14px] uppercase font-semibold text-[#1E1B3A] text-[9px] sm:text-[11px] tracking-[0.18em]">
+                      PER “*************”
+                    </div>
                   </div>
 
-                  <div className="border-t border-[#E6E4F5] pt-5 grid grid-cols-3 gap-2 text-center text-xs">
-                    <div>
-                      <span className="block font-semibold text-[#1E1B3A] text-sm">
-                        90 minuti
-                      </span>
-                      <span className="text-[#5E5B78]">Durata</span>
+                  {/* Centro: Conferito a + asterischi */}
+                  <div className="my-2 sm:my-3">
+                    {/* 4. CONFERITO A */}
+                    <div className="uppercase font-semibold text-[#1E1B3A] text-[10px] sm:text-[12px] tracking-wider">
+                      CONFERITO A
                     </div>
-                    <div>
-                      <span className="block font-semibold text-[#1E1B3A] text-sm">
-                        Superato
+
+                    {/* 5. Asterischi con linea sottile sotto */}
+                    <div className="mt-1 sm:mt-1.5 flex flex-col items-center">
+                      <span className="text-[#B7B3D6] text-[14px] sm:text-[17px] tracking-[0.1em] font-mono leading-none select-none">
+                        ********************
                       </span>
-                      <span className="text-[#5E5B78]">Test finale</span>
+                      <div className="w-[60%] border-b border-[#E6E4F5] mt-1 sm:mt-1.5" />
                     </div>
-                    <div>
-                      <span className="block font-semibold text-[#1E1B3A] text-sm">
-                        gg/mm/aaaa
-                      </span>
-                      <span className="text-[#5E5B78]">Data</span>
+                  </div>
+
+                  {/* 6. Riga finale a tre colonne */}
+                  <div className="w-full pt-1">
+                    {/* Mobile (sotto 560px): logo sopra, firmatari affiancati sotto */}
+                    <div className="flex flex-col items-center min-[560px]:hidden gap-2.5">
+                      <img
+                        src="/logo-consulenti-privacy.webp"
+                        alt="Consulenti Privacy"
+                        height={34}
+                        loading="lazy"
+                        onError={(e) => {
+                          e.currentTarget.style.visibility = 'hidden';
+                        }}
+                        className="h-[34px] w-auto object-contain"
+                      />
+                      <div className="w-full flex items-end justify-between px-1 gap-2">
+                        <div className="text-center flex-1">
+                          <div className="font-semibold text-[#1E1B3A] text-[11px] whitespace-nowrap">
+                            Avv. Nome Cognome
+                          </div>
+                          <div className="text-[7.5px] uppercase tracking-[0.15em] text-[#5E5B78] mt-0.5">
+                            SENIOR PRIVACY SPECIALIST
+                          </div>
+                        </div>
+                        <div className="text-center flex-1">
+                          <div className="font-semibold text-[#1E1B3A] text-[11px] whitespace-nowrap">
+                            Avv. Nome Cognome
+                          </div>
+                          <div className="text-[7.5px] uppercase tracking-[0.15em] text-[#5E5B78] mt-0.5">
+                            SENIOR PRIVACY SPECIALIST
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Desktop/Tablet (560px e oltre): tre colonne allineate in basso */}
+                    <div className="hidden min-[560px]:grid min-[560px]:grid-cols-3 items-end gap-2 text-center">
+                      <div className="text-center">
+                        <div className="font-semibold text-[#1E1B3A] text-[14px] sm:text-[15px]">
+                          Avv. Nome Cognome
+                        </div>
+                        <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5E5B78] mt-0.5">
+                          SENIOR PRIVACY SPECIALIST
+                        </div>
+                      </div>
+
+                      <div className="flex justify-center pb-0.5">
+                        <img
+                          src="/logo-consulenti-privacy.webp"
+                          alt="Consulenti Privacy"
+                          height={44}
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.style.visibility = 'hidden';
+                          }}
+                          className="h-[44px] w-auto object-contain"
+                        />
+                      </div>
+
+                      <div className="text-center">
+                        <div className="font-semibold text-[#1E1B3A] text-[14px] sm:text-[15px]">
+                          Avv. Nome Cognome
+                        </div>
+                        <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5E5B78] mt-0.5">
+                          SENIOR PRIVACY SPECIALIST
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1033,7 +1103,7 @@ export default function App() {
               },
               {
                 q: "L’attestato è valido in caso di controllo?",
-                a: "L’AI Act non prevede una certificazione ufficiale per l’alfabetizzazione in materia di IA. L’attestato nominativo, con data ed esito del test, insieme al programma del corso e al registro della formazione, costituisce la documentazione da esibire in caso di verifica.",
+                a: "L’AI Act non prevede una certificazione ufficiale per l’alfabetizzazione in materia di IA. L’attestato nominativo di partecipazione e superamento, insieme alla tracciabilità e alla reportistica della piattaforma e-learning, costituisce la documentazione da esibire in caso di verifica.",
               },
               {
                 q: "Serve fissare una data o fermare il lavoro?",
