@@ -173,10 +173,10 @@ export default function App() {
               {!isSubmitted ? (
                 <div>
                   <h2 className="text-[22px] font-bold text-[#302687] leading-snug">
-                    Iscriviti alla lista d’attesa
+                    Sii tra i primi ad accedere al corso
                   </h2>
                   <p className="mt-2 text-[14px] text-[#5E5B78] leading-relaxed">
-                    Accesso prioritario al corso e, subito via email, il modello Excel per la mappatura degli strumenti di IA in azienda.
+                    Iscriviti alla lista d’attesa: ti contattiamo per primi all’apertura e ricevi subito il modello Excel per la mappatura degli strumenti di IA in azienda.
                   </p>
 
                   <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -321,13 +321,14 @@ export default function App() {
                         />
                         <span className="text-[13px] text-[#5E5B78] leading-snug">
                           Ho preso visione dell’
-                          <button
-                            type="button"
-                            onClick={() => setIsPrivacyModalOpen(true)}
+                          <a
+                            href="https://www.iconsulentiprivacy.it/privacy-cookie-policy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="text-[#302687] underline hover:text-[#5A4FC0] font-medium"
                           >
                             informativa privacy
-                          </button>{' '}
+                          </a>{' '}
                           e acconsento al trattamento dei dati per ricevere informazioni sul corso.
                         </span>
                       </label>
@@ -338,7 +339,7 @@ export default function App() {
                       type="submit"
                       className="w-full btn-primary text-center mt-2 shadow-md"
                     >
-                      Iscriviti alla lista d’attesa
+                      Richiedi l’accesso prioritario
                     </button>
 
                     <p className="text-center text-[12.5px] text-[#5E5B78] pt-1">
@@ -1129,22 +1130,15 @@ export default function App() {
             <p className="text-center sm:text-left">
               Consulenti Privacy S.r.l., Via Valentini 11, 47923 Rimini (RN) · P.IVA 04391970409
             </p>
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => setIsPrivacyModalOpen(true)}
+            <div>
+              <a
+                href="https://www.iconsulentiprivacy.it/privacy-cookie-policy/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-white transition-colors cursor-pointer"
               >
-                Privacy policy
-              </button>
-              <span>·</span>
-              <button
-                type="button"
-                onClick={() => setIsPrivacyModalOpen(true)}
-                className="hover:text-white transition-colors cursor-pointer"
-              >
-                Cookie policy
-              </button>
+                Informativa privacy
+              </a>
             </div>
           </div>
         </div>
