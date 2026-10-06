@@ -27,10 +27,28 @@ export default function App() {
     if (e) e.preventDefault();
     const el = document.getElementById('iscrizione');
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-      const firstInput = el.querySelector('input') as HTMLInputElement | null;
-      if (firstInput) {
-        firstInput.focus({ preventScroll: true });
+      const isDesktop = window.innerWidth >= 960;
+      if (isDesktop) {
+        // Su desktop il modulo è affiancato all'headline nell'hero principale:
+        // scrollando a inizio pagina (top: 0), l'intero hero e il modulo sono perfettamente visibili
+        // con 72px di respiro naturale sotto l'header sticky, senza alcun taglio.
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      } else {
+        // Su mobile e tablet il modulo è posizionato sotto l'headline:
+        // calcoliamo l'offset esatto dell'header sticky (68px/84px) con 24px di margine superiore
+        // per mostrare la card completa (angoli arrotondati, ombra e titolo) senza nascondere nulla.
+        const header = document.querySelector('header');
+        const headerHeight = header ? header.offsetHeight : (window.innerWidth < 640 ? 68 : 84);
+        const elementPosition = el.getBoundingClientRect().top + window.scrollY;
+        const targetPosition = elementPosition - headerHeight - 24;
+
+        window.scrollTo({
+          top: Math.max(0, targetPosition),
+          behavior: 'smooth',
+        });
       }
     }
   };
@@ -150,7 +168,7 @@ export default function App() {
             {/* Colonna destra: Form Card */}
             <div
               id="iscrizione"
-              className="bg-white rounded-[14px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(48,38,135,0.25)] text-[#1E1B3A] border border-[#E6E4F5]"
+              className="scroll-mt-[88px] min-[960px]:scroll-mt-[110px] bg-white rounded-[14px] p-6 sm:p-8 shadow-[0_20px_50px_rgba(48,38,135,0.25)] text-[#1E1B3A] border border-[#E6E4F5]"
             >
               {!isSubmitted ? (
                 <div>
