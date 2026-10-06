@@ -830,131 +830,19 @@ export default function App() {
             </div>
 
             {/* Destra: Anteprima attestato */}
-            <div className="relative">
-              <div className="relative w-full bg-white rounded-[14px] shadow-[0_20px_50px_rgba(48,38,135,0.18)] border border-[#E6E4F5] overflow-hidden flex flex-col justify-between aspect-[16/10] min-h-[310px] sm:min-h-[380px]">
-                {/* Barra superiore di 6px con la sfumatura del brand */}
-                <div className="h-[6px] w-full bg-brand-gradient shrink-0" />
-
-                {/* Cornice interna sottile (1px #E6E4F5) a 14px dai bordi */}
-                <div className="pointer-events-none absolute inset-[14px] border border-[#E6E4F5] rounded-[8px]" />
-
-                {/* Elementi decorativi geometrici negli angoli (fasce diagonali) */}
-                <div className="pointer-events-none absolute top-0 right-0 w-20 h-20 sm:w-24 sm:h-24 overflow-hidden z-10">
-                  <div className="absolute top-0 right-0 w-32 h-7 sm:w-36 sm:h-8 bg-brand-gradient opacity-90 origin-top-right transform -rotate-45 translate-x-4 translate-y-4 shadow-sm" />
-                  <div className="absolute top-0 right-0 w-28 h-2 bg-white/30 origin-top-right transform -rotate-45 translate-x-5 translate-y-8" />
-                </div>
-                <div className="pointer-events-none absolute bottom-0 left-0 w-20 h-20 sm:w-24 sm:h-24 overflow-hidden z-10">
-                  <div className="absolute bottom-0 left-0 w-32 h-7 sm:w-36 sm:h-8 bg-brand-gradient opacity-90 origin-bottom-left transform -rotate-45 -translate-x-4 -translate-y-4 shadow-sm" />
-                  <div className="absolute bottom-0 left-0 w-28 h-2 bg-white/30 origin-bottom-left transform -rotate-45 -translate-x-5 -translate-y-8" />
-                </div>
-
-                {/* Contenuto centrato */}
-                <div className="relative px-5 py-5 sm:px-8 sm:py-7 min-[960px]:px-9 min-[960px]:py-8 text-center flex-1 flex flex-col justify-between">
-                  {/* Testata dell'attestato */}
-                  <div>
-                    {/* 1. Titolo su due righe */}
-                    <h3 className="font-bold uppercase text-[#302687] text-[15px] min-[400px]:text-[16px] sm:text-[19px] min-[960px]:text-[21px] tracking-[0.02em] leading-[1.2] max-w-[92%] mx-auto font-sans">
-                      ATTESTATO DI PARTECIPAZIONE<br />E SUPERAMENTO DEL CORSO
-                    </h3>
-
-                    {/* 2. Tre righe in maiuscolo */}
-                    <div className="mt-2 sm:mt-3 space-y-0.5 sm:space-y-1 font-medium uppercase text-[#5E5B78] text-[8.5px] min-[400px]:text-[9px] sm:text-[10px] min-[960px]:text-[11px] tracking-[0.18em] leading-tight">
-                      <div>AI LITERACY - AI ACT</div>
-                      <div>REGOLAMENTO (UE) 2024/1689 E D.LGS. 9 SETTEMBRE 2026, N. 160</div>
-                      <div>(IN MODALITÀ E-LEARNING)</div>
-                    </div>
-
-                    {/* 3. PER “*************” */}
-                    <div className="mt-2.5 sm:mt-[14px] uppercase font-semibold text-[#1E1B3A] text-[9px] sm:text-[11px] tracking-[0.18em]">
-                      PER “*************”
-                    </div>
-                  </div>
-
-                  {/* Centro: Conferito a + asterischi */}
-                  <div className="my-2 sm:my-3">
-                    {/* 4. CONFERITO A */}
-                    <div className="uppercase font-semibold text-[#1E1B3A] text-[10px] sm:text-[12px] tracking-wider">
-                      CONFERITO A
-                    </div>
-
-                    {/* 5. Asterischi con linea sottile sotto */}
-                    <div className="mt-1 sm:mt-1.5 flex flex-col items-center">
-                      <span className="text-[#B7B3D6] text-[14px] sm:text-[17px] tracking-[0.1em] font-mono leading-none select-none">
-                        ********************
-                      </span>
-                      <div className="w-[60%] border-b border-[#E6E4F5] mt-1 sm:mt-1.5" />
-                    </div>
-                  </div>
-
-                  {/* 6. Riga finale a tre colonne */}
-                  <div className="w-full pt-1">
-                    {/* Mobile (sotto 560px): logo sopra, firmatari affiancati sotto */}
-                    <div className="flex flex-col items-center min-[560px]:hidden gap-2.5">
-                      <img
-                        src="/logo-consulenti-privacy.webp"
-                        alt="Consulenti Privacy"
-                        height={34}
-                        loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.style.visibility = 'hidden';
-                        }}
-                        className="h-[34px] w-auto object-contain"
-                      />
-                      <div className="w-full flex items-end justify-between px-1 gap-2">
-                        <div className="text-center flex-1">
-                          <div className="font-semibold text-[#1E1B3A] text-[11px] whitespace-nowrap">
-                            Avv. Nome Cognome
-                          </div>
-                          <div className="text-[7.5px] uppercase tracking-[0.15em] text-[#5E5B78] mt-0.5">
-                            SENIOR PRIVACY SPECIALIST
-                          </div>
-                        </div>
-                        <div className="text-center flex-1">
-                          <div className="font-semibold text-[#1E1B3A] text-[11px] whitespace-nowrap">
-                            Avv. Nome Cognome
-                          </div>
-                          <div className="text-[7.5px] uppercase tracking-[0.15em] text-[#5E5B78] mt-0.5">
-                            SENIOR PRIVACY SPECIALIST
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Desktop/Tablet (560px e oltre): tre colonne allineate in basso */}
-                    <div className="hidden min-[560px]:grid min-[560px]:grid-cols-3 items-end gap-2 text-center">
-                      <div className="text-center">
-                        <div className="font-semibold text-[#1E1B3A] text-[14px] sm:text-[15px]">
-                          Avv. Nome Cognome
-                        </div>
-                        <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5E5B78] mt-0.5">
-                          SENIOR PRIVACY SPECIALIST
-                        </div>
-                      </div>
-
-                      <div className="flex justify-center pb-0.5">
-                        <img
-                          src="/logo-consulenti-privacy.webp"
-                          alt="Consulenti Privacy"
-                          height={44}
-                          loading="lazy"
-                          onError={(e) => {
-                            e.currentTarget.style.visibility = 'hidden';
-                          }}
-                          className="h-[44px] w-auto object-contain"
-                        />
-                      </div>
-
-                      <div className="text-center">
-                        <div className="font-semibold text-[#1E1B3A] text-[14px] sm:text-[15px]">
-                          Avv. Nome Cognome
-                        </div>
-                        <div className="text-[9px] sm:text-[10px] uppercase tracking-[0.18em] text-[#5E5B78] mt-0.5">
-                          SENIOR PRIVACY SPECIALIST
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="w-full">
+              <div className="w-full aspect-[16/9] bg-white rounded-[14px] overflow-hidden border border-[#E6E4F5] shadow-[0_30px_70px_-36px_rgba(48,38,135,0.55)]">
+                <img
+                  src="/attestato-ai-literacy.webp"
+                  alt="Fac-simile dell'attestato di partecipazione e superamento del corso AI Literacy di Consulenti Privacy"
+                  width={1600}
+                  height={900}
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.style.visibility = 'hidden';
+                  }}
+                  className="w-full h-auto aspect-[16/9] object-contain block"
+                />
               </div>
             </div>
           </div>
