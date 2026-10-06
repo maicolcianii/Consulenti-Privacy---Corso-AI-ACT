@@ -176,7 +176,7 @@ export default function App() {
                     Sii tra i primi ad accedere al corso
                   </h2>
                   <p className="mt-2 text-[14px] text-[#5E5B78] leading-relaxed">
-                    Iscriviti alla lista d’attesa: ti contattiamo per primi all’apertura e ricevi subito il modello Excel per la mappatura degli strumenti di IA in azienda.
+                    Avrai la precedenza all’apertura dei nuovi corsi e potrai scaricare subito il modello Excel per la mappatura degli strumenti di IA nella tua azienda.
                   </p>
 
                   <form onSubmit={handleSubmit} className="mt-6 space-y-4">
