@@ -145,10 +145,10 @@ export default function App() {
 
               <p className="mt-6 text-[17px] text-white/88 leading-relaxed max-w-xl">
                 <span className="inline sm:hidden">
-                  Un corso online on demand sull’uso corretto dell’IA, come richiesto dall’art. 4 dell’AI Act: ognuno lo segue quando vuole, con attestato nominativo.
+                  Un corso online on demand sull’AI Act e sull’alfabetizzazione in materia di IA, come richiesto dall’art. 4 del Regolamento europeo: ognuno lo segue quando vuole, con attestato nominativo.
                 </span>
                 <span className="hidden sm:inline">
-                  Un corso online on demand che forma i dipendenti sull’uso corretto dell’IA, come richiesto dall’art. 4 del Regolamento europeo. Nessuna diretta e nessuna data da fissare: ognuno lo segue quando vuole, in circa 90 minuti complessivi, e al termine riceve un attestato nominativo.
+                  Un corso online on demand sull’AI Act e sull’alfabetizzazione in materia di IA, come richiesto dall’art. 4 del Regolamento europeo. Nessuna diretta e nessuna data da fissare: ognuno lo segue quando vuole, in circa 90 minuti complessivi, e al termine riceve un attestato nominativo.
                 </span>
               </p>
 
@@ -263,7 +263,7 @@ export default function App() {
 
                       <div>
                         <label className="block text-xs font-semibold text-[#1E1B3A] mb-1.5">
-                          Dipendenti da formare *
+                          Persone da formare *
                         </label>
                         <select
                           required
@@ -424,7 +424,10 @@ export default function App() {
               Cosa chiede l’AI Act alle aziende
             </h2>
             <p className="mt-4 text-[16px] text-[#5E5B78] leading-relaxed">
-              L’art. 4 del Regolamento (UE) 2024/1689, applicabile dal 2 febbraio 2025, chiede alle organizzazioni che utilizzano sistemi di Intelligenza Artificiale di adottare misure per sviluppare le competenze del personale che li impiega, in modo proporzionato alle dimensioni dell’azienda, ai ruoli e ai rischi.
+              L’art. 4 del Regolamento (UE) 2024/1689, applicabile dal 2 febbraio 2025 e riformulato dal Digital Omnibus in vigore dal 27 luglio 2026, chiede alle organizzazioni che utilizzano sistemi di Intelligenza Artificiale di adottare misure per sostenere lo sviluppo delle competenze di chi li impiega, tenendo conto delle conoscenze, dell’esperienza e della formazione delle persone, del contesto d’uso e delle persone su cui i sistemi vengono utilizzati.
+            </p>
+            <p className="mt-3 text-[16px] text-[#5E5B78] leading-relaxed">
+              In Italia il Regolamento è integrato dalla Legge 132/2025 e dai decreti legislativi attuativi n. 160/2026 e n. 179/2026, quest’ultimo pubblicato in Gazzetta Ufficiale l’8 ottobre 2026.
             </p>
           </div>
 
@@ -438,7 +441,7 @@ export default function App() {
                 Chi riguarda
               </h3>
               <p className="text-[15px] text-[#5E5B78] leading-relaxed">
-                Tutto il personale che nell’attività lavorativa utilizza chatbot generativi, software con funzioni di IA o sistemi di raccomandazione e scoring.
+                Il personale e chiunque operi per conto dell’azienda, come collaboratori e consulenti, che utilizza chatbot generativi, software con funzioni di IA o sistemi di raccomandazione e scoring.
               </p>
             </div>
 
@@ -495,7 +498,7 @@ export default function App() {
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px] text-white">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Evidenza di strumenti non autorizzati e dati riservati</span>
+                    <span>Evidenza degli strumenti non autorizzati e degli utilizzi che coinvolgono dati riservati</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px] text-white">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
@@ -695,7 +698,7 @@ export default function App() {
                 Il programma
               </span>
               <h2 className="text-[28px] sm:text-[34px] min-[960px]:text-[38px] font-bold text-[#302687] mt-2 leading-tight">
-                Cosa imparano i dipendenti
+                Cosa imparano i partecipanti
               </h2>
               <p className="mt-4 text-[16px] text-[#5E5B78] leading-relaxed">
                 Un percorso pensato per coniugare adempimento normativo, praticità organizzativa e qualità dei contenuti, per chi utilizza l’IA nel lavoro di tutti i giorni.
@@ -721,7 +724,7 @@ export default function App() {
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
-                    <span>Contenuti uniformi per tutto il personale</span>
+                    <span>Una base comune per tutto il personale</span>
                   </li>
                   <li className="flex items-center gap-3 text-[14.5px]">
                     <Check className="w-5 h-5 text-[#D9D5FA] shrink-0 stroke-[2.5]" />
@@ -1002,19 +1005,15 @@ export default function App() {
             {[
               {
                 q: "La formazione sull’IA è obbligatoria?",
-                a: "Sì. L’art. 4 dell’AI Act, applicabile dal 2 febbraio 2025, richiede a chi utilizza sistemi di IA in ambito professionale di adottare misure per sviluppare le competenze del proprio personale, in modo proporzionato al contesto e ai rischi.",
+                a: "Sì. L’art. 4 dell’AI Act, riformulato dal Digital Omnibus nel 2026, richiede a chi usa l’IA in ambito professionale di adottare misure per sostenere le competenze del personale e di chi opera per suo conto, tenendo conto del contesto d’uso. La formazione è lo strumento più diretto per farlo e dimostrarlo.",
               },
               {
                 q: "Chi deve seguire il corso?",
-                a: "Tutto il personale che nell’attività lavorativa utilizza o entra in contatto con strumenti di Intelligenza Artificiale: dagli uffici amministrativi al marketing, dalle risorse umane all’assistenza clienti.",
-              },
-              {
-                q: "L’attestato è valido in caso di controllo?",
-                a: "L’AI Act non prevede una certificazione ufficiale per l’alfabetizzazione in materia di IA. L’attestato nominativo di partecipazione e superamento, insieme alla tracciabilità e alla reportistica della piattaforma e-learning, costituisce la documentazione da esibire in caso di verifica.",
+                a: "Chiunque utilizzi strumenti di Intelligenza Artificiale nel proprio lavoro, dipendenti e collaboratori: dagli uffici amministrativi al marketing, dalle risorse umane all’assistenza clienti.",
               },
               {
                 q: "Serve fissare una data o fermare il lavoro?",
-                a: "No. Il corso è on demand: non ci sono dirette né date da concordare. Ogni dipendente lo segue nel momento più adatto, per circa 90 minuti complessivi.",
+                a: "No. Il corso è on demand: non ci sono dirette né date da concordare. Ogni partecipante lo segue quando preferisce, anche in più sessioni, per circa 90 minuti complessivi.",
               },
               {
                 q: "L’iscrizione alla lista d’attesa è vincolante?",
